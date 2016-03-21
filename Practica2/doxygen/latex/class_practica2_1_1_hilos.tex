@@ -1,0 +1,136 @@
+\hypertarget{class_practica2_1_1_hilos}{}\section{Practica2.\+Hilos Class Reference}
+\label{class_practica2_1_1_hilos}\index{Practica2.\+Hilos@{Practica2.\+Hilos}}
+
+
+Clase que suma los arrays mediante threads, uno para cada fila.  
+
+
+
+
+Inheritance diagram for Practica2.\+Hilos\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_practica2_1_1_hilos__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Practica2.\+Hilos\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_practica2_1_1_hilos__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_practica2_1_1_hilos_a2415cb95146d7a184ee18ffc20e8bbd6}{Hilos} (int n, int f, int fila\+\_\+m1\mbox{[}$\,$\mbox{]}, int fila\+\_\+m2\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Constructor de la Clase, inicializa las variables necesarias y crea el array resultante. \end{DoxyCompactList}\item 
+\hypertarget{class_practica2_1_1_hilos_a25701049a60cb68fa20a2b94ecaf01d0}{}void \hyperlink{class_practica2_1_1_hilos_a25701049a60cb68fa20a2b94ecaf01d0}{run} ()\label{class_practica2_1_1_hilos_a25701049a60cb68fa20a2b94ecaf01d0}
+
+\begin{DoxyCompactList}\small\item\em Función run para iniciar el thread, suma ambos arrays y lo almacena en la variable res\mbox{[}\mbox{]}\mbox{[}\mbox{]}, además de calcular su tiempo de ejecución. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \hyperlink{class_practica2_1_1_hilos_acf21cb1773256bf75be2bfa3246b5bed}{sumar} (Matriz m1, Matriz m2)
+\begin{DoxyCompactList}\small\item\em Función que inicia un thread con cada una de las filas de los arrays y devuelve el array resultante. \end{DoxyCompactList}\item 
+\hypertarget{class_practica2_1_1_hilos_a7a6c0033a27bcf745d29a99012114cee}{}static void \hyperlink{class_practica2_1_1_hilos_a7a6c0033a27bcf745d29a99012114cee}{main} (String\mbox{[}$\,$\mbox{]} args)\label{class_practica2_1_1_hilos_a7a6c0033a27bcf745d29a99012114cee}
+
+\begin{DoxyCompactList}\small\item\em Función main del ejercicio, pide que se le introduzca por pantalla el número de elementos del array, crea las matrices a sumar e invoca la función sumar, pasándole como parámetro los arrays creados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_practica2_1_1_hilos_aaff16bd21f926b0ff36f677f79c87bd7}{tiempo}
+\item 
+int \hyperlink{class_practica2_1_1_hilos_a90961d2fd4d91c83c8b89fa80f079902}{fm1} \mbox{[}$\,$\mbox{]}
+\item 
+int \hyperlink{class_practica2_1_1_hilos_aeed8873453657337fb1a6143578e72fb}{fm2} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase que suma los arrays mediante threads, uno para cada fila. 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_practica2_1_1_hilos_a2415cb95146d7a184ee18ffc20e8bbd6}{}\index{Practica2\+::\+Hilos@{Practica2\+::\+Hilos}!Hilos@{Hilos}}
+\index{Hilos@{Hilos}!Practica2\+::\+Hilos@{Practica2\+::\+Hilos}}
+\subsubsection[{Hilos}]{\setlength{\rightskip}{0pt plus 5cm}Practica2.\+Hilos.\+Hilos (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{int}]{f, }
+\item[{int}]{fila\+\_\+m1\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{fila\+\_\+m2\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{class_practica2_1_1_hilos_a2415cb95146d7a184ee18ffc20e8bbd6}
+
+
+Constructor de la Clase, inicializa las variables necesarias y crea el array resultante. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & int, el número de filas y columnas que tendrá el array resultante y el número de elementos de los vectores \textquotesingle{}fila\textquotesingle{} \\
+\hline
+{\em f} & int, el número de fila seleccionado de ambos arrays \\
+\hline
+{\em fila\+\_\+m1} & int\mbox{[}\mbox{]}, vector con el contenido de una fila de uno de los arrays a sumar \\
+\hline
+{\em fila\+\_\+m2} & int\mbox{[}\mbox{]}, vector con el contenido de una fila del otro array a sumar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_practica2_1_1_hilos_acf21cb1773256bf75be2bfa3246b5bed}{}\index{Practica2\+::\+Hilos@{Practica2\+::\+Hilos}!sumar@{sumar}}
+\index{sumar@{sumar}!Practica2\+::\+Hilos@{Practica2\+::\+Hilos}}
+\subsubsection[{sumar}]{\setlength{\rightskip}{0pt plus 5cm}static int \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Practica2.\+Hilos.\+sumar (
+\begin{DoxyParamCaption}
+\item[{Matriz}]{m1, }
+\item[{Matriz}]{m2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_practica2_1_1_hilos_acf21cb1773256bf75be2bfa3246b5bed}
+
+
+Función que inicia un thread con cada una de las filas de los arrays y devuelve el array resultante. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m1} & Matriz, elemento que contiene el primer array a sumar \\
+\hline
+{\em m2} & Matriz, elemento que contiene segundo primer array a sumar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+res int\mbox{[}\mbox{]}\mbox{[}\mbox{]}, array resultante de la suma de ambos vectores 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_practica2_1_1_hilos_a90961d2fd4d91c83c8b89fa80f079902}{}\index{Practica2\+::\+Hilos@{Practica2\+::\+Hilos}!fm1@{fm1}}
+\index{fm1@{fm1}!Practica2\+::\+Hilos@{Practica2\+::\+Hilos}}
+\subsubsection[{fm1}]{\setlength{\rightskip}{0pt plus 5cm}int Practica2.\+Hilos.\+fm1\mbox{[}$\,$\mbox{]}}\label{class_practica2_1_1_hilos_a90961d2fd4d91c83c8b89fa80f079902}
+Filas de la matriz 1 \hypertarget{class_practica2_1_1_hilos_aeed8873453657337fb1a6143578e72fb}{}\index{Practica2\+::\+Hilos@{Practica2\+::\+Hilos}!fm2@{fm2}}
+\index{fm2@{fm2}!Practica2\+::\+Hilos@{Practica2\+::\+Hilos}}
+\subsubsection[{fm2}]{\setlength{\rightskip}{0pt plus 5cm}int Practica2.\+Hilos.\+fm2\mbox{[}$\,$\mbox{]}}\label{class_practica2_1_1_hilos_aeed8873453657337fb1a6143578e72fb}
+Filas de la matriz 2 \hypertarget{class_practica2_1_1_hilos_aaff16bd21f926b0ff36f677f79c87bd7}{}\index{Practica2\+::\+Hilos@{Practica2\+::\+Hilos}!tiempo@{tiempo}}
+\index{tiempo@{tiempo}!Practica2\+::\+Hilos@{Practica2\+::\+Hilos}}
+\subsubsection[{tiempo}]{\setlength{\rightskip}{0pt plus 5cm}double Practica2.\+Hilos.\+tiempo}\label{class_practica2_1_1_hilos_aaff16bd21f926b0ff36f677f79c87bd7}
+Variable tiempo que lleva completar un hilo 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hilos.\+java\end{DoxyCompactItemize}
