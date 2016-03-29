@@ -1,6 +1,10 @@
 package Practica3;
 
-public class ClaseNueva {
+/** @brief Clase que implementa el main y se encarga de realizar la ejecución de threads con objetos de la clase B
+ * y en la cuál todos los threads pueden ejecutar el método enter EnterAndWait()
+ * @author Nara, Javier, Esteban
+ */
+public class Control1 {
 
 	public static void main(String [] args){
 		try{
