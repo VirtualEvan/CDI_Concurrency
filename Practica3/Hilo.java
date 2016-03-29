@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 public class Hilo extends Thread{
 	private int numThread;
-	static int number=0;
 	private int incremento;
+	private Contador count;
+	private int resultado;
 
-	public Hilo(int n, int incremento) {
+	public Hilo(int n, int incremento, Contador contador) {
 		this.numThread = n;
 		this.incremento = incremento;
+		this.count=contador;
 	}
 
 	/** @brief threads
@@ -20,23 +22,12 @@ public class Hilo extends Thread{
 	public void run()
 	{
 		System.out.println( "Incrementando en el Thread " +numThread );
-		incrementar(incremento);
+		int resultado = 0;
+		resultado = cont.incrementar(incremento);
+		System.out.println("El resultado es : "+valor);
 		System.out.println( "Finalizado el incrmento del Thread " +numThread );
 	}
 
-	/** @brief método que incrementa la variable
-	 *
-	 *
-	 */
-	public int incrementar( int n ){
-		for ( int i=0; i<n; i++ ){
-			//sleep
-			number++;
-		}
-		System.out.println("Número incrementado: "+number);
-
-		return number;
-	}
 
 
 	/**
