@@ -10,9 +10,8 @@ public class Jugador implements Runnable  {
 
     /** @brief Método constructor de la clase
      * @author Nara, Javier, Esteban
-     * @param int id : Número identificador del jugador a crear
-     * @param Pelota pelota : Objeto pelota con la cual se realizará el juego
-     * @param Semaphore semaforo : Objeto semáforo que
+     * @param id : Número identificador del jugador a crear
+     * @param pelota : Objeto pelota con la cual se realizará el juego
      */
     public Jugador( int id, Pelota pelota ) {
     	this.numJugador = id;
