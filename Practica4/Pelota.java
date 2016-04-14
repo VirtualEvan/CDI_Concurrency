@@ -15,10 +15,10 @@ public class Pelota {
 
     /** @brief Método constructor de la clase
      * @author Nara, Javier, Esteban
-     * @param int turno : Número del jugador al que le toca jugar
-     * @param int jugadores : Número de jugadores del partido
-     * @param int maxJugadas : Número de turnos que se realizarán en el juego
-     * @param int modalidad : Identificador que indica si el juego será por turnos o por tiempo
+     * @param turno : Número del jugador al que le toca jugar
+     * @param jugadores : Número de jugadores del partido
+     * @param maxJugadas : Número de turnos que se realizarán en el juego
+     * @param modalidad : Identificador que indica si el juego será por turnos o por tiempo
      */
     public Pelota( int turno, int jugadores, int maxJugadas, int modalidad ) {
     	this.turno = turno;
@@ -32,14 +32,14 @@ public class Pelota {
 
     /** @brief Método que asinga el jugador al cuál le corresponde el turno
      * @author Nara, Javier, Esteban
-     * @param int turno : Número del jugador al que le toca jugar
+     * @param turno : Número del jugador al que le toca jugar
      */
     public void setTurno( int turno ) {
       this.turno = turno;
     }
     /** @brief Método que obtiene el jugador al cuál le corresponde el turno
      * @author Nara, Javier, Esteban
-     * @ret int turno : Número del jugador al que le toca jugar
+     * @return turno : Número del jugador al que le toca jugar
      */
     public int getTurno() {
       return this.turno;
@@ -47,7 +47,7 @@ public class Pelota {
 
     /** @brief Método que cambia el estado del juego (termina el juego)
      * @author Nara, Javier, Esteban
-     * @param boolean bool : Estado que tendrá el juego
+     * @param bool : Estado que tendrá el juego
      */
     public void setEstado( boolean bool ) {
       this.estado = bool;
@@ -55,7 +55,7 @@ public class Pelota {
 
     /** @brief Método que obtiene el estado del juego (termina el juego)
      * @author Nara, Javier, Esteban
-     * @ret int estado : Estado que tendrá el juego
+     * @return int estado : Estado que tendrá el juego
      */
     public boolean getEstado() {
       return this.estado;
@@ -63,7 +63,7 @@ public class Pelota {
 
     /** @brief Método que obtiene cuántos jugadores hay en el partido
      * @author Nara, Javier, Esteban
-     * @ret int jugadores : Número de jugadores del partido
+     * @return jugadores : Número de jugadores del partido
      */
     public int getJugadores() {
       return this.jugadores;
@@ -71,7 +71,7 @@ public class Pelota {
 
     /** @brief Método que obtiene cuántos turnos se han realozado
      * @author Nara, Javier, Esteban
-     * @ret int jugadas : Número de turnos que se han realizado
+     * @return jugadas : Número de turnos que se han realizado
      */
     public int getJugadas() {
       return this.jugadas;
@@ -86,7 +86,7 @@ public class Pelota {
 
     /** @brief Método que obtiene cuántos turnos se deben realizar en el partido
      * @author Nara, Javier, Esteban
-     * @ret int maxJugadas : Número de turnos que se deben realizar
+     * @return maxJugadas : Número de turnos que se deben realizar
      */
     public int getMaxJugadas() {
       return this.maxJugadas;
@@ -94,7 +94,7 @@ public class Pelota {
 
     /** @brief Método que obtiene cómo se llevará a cabo el partido (por tiempo o por turnos)
      * @author Nara, Javier, Esteban
-     * @ret int modalidad : Modalidad que se jugará
+     * @return modalidad : Modalidad que se jugará
      */
     public int getModalidad() {
       return this.modalidad;
@@ -109,7 +109,7 @@ public class Pelota {
 
     /** @brief Método que obtiene qué texto debe salir por pantalla (ping o pong)
      * @author Nara, Javier, Esteban
-     * @ret boolean texto : Valor que identifica qué texto saldrá por pantalla
+     * @return texto : Valor que identifica qué texto saldrá por pantalla
      */
     public boolean getTexto() {
       return this.texto;
