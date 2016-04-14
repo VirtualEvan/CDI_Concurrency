@@ -5,66 +5,114 @@ package Practica4;
  * @author Nara, Javier, Esteban
  */
 public class Pelota {
-    private int posesion;
+    private int turno;
     private boolean estado;
     private int jugadores;
     private int jugadas;
     private int maxJugadas;
     private int modalidad;
-    private boolean valor;
+    private boolean texto;
 
-    public Pelota( int posesion, int jugadores, int maxJugadas, int modalidad ) {
-    	this.posesion = posesion;
+    /* @brief Método constructor de la clase
+     * @author Nara, Javier, Esteban
+     * @param int turno : Número del jugador al que le toca jugar
+     * @param int jugadores : Número de jugadores del partido
+     * @param int maxJugadas : Número de turnos que se realizarán en el juego
+     * @param int modalidad : Identificador que indica si el juego será por turnos o por tiempo
+     */
+    public Pelota( int turno, int jugadores, int maxJugadas, int modalidad ) {
+    	this.turno = turno;
     	this.jugadores = jugadores;
     	this.maxJugadas = maxJugadas;
     	this.modalidad = modalidad;
       this.jugadas = 0;
       this.estado = true;
-      this.valor = true;
+      this.texto = true;
     }
 
-    public void setPosesion( int posesion ) {
-      this.posesion = posesion;
+    /* @brief Método que asinga el jugador al cuál le corresponde el turno
+     * @author Nara, Javier, Esteban
+     * @param int turno : Número del jugador al que le toca jugar
+     */
+    public void setTurno( int turno ) {
+      this.turno = turno;
+    }
+    /* @brief Método que obtiene el jugador al cuál le corresponde el turno
+     * @author Nara, Javier, Esteban
+     * @ret int turno : Número del jugador al que le toca jugar
+     */
+    public int getTurno() {
+      return this.turno;
     }
 
-    public int getPosesion() {
-      return this.posesion;
-    }
-
+    /* @brief Método que cambia el estado del juego (termina el juego)
+     * @author Nara, Javier, Esteban
+     * @param boolean bool : Estado que tendrá el juego
+     */
     public void setEstado( boolean bool ) {
       this.estado = bool;
     }
 
+    /* @brief Método que obtiene el estado del juego (termina el juego)
+     * @author Nara, Javier, Esteban
+     * @ret int estado : Estado que tendrá el juego
+     */
     public boolean getEstado() {
       return this.estado;
     }
 
+    /* @brief Método que obtiene cuántos jugadores hay en el partido
+     * @author Nara, Javier, Esteban
+     * @ret int jugadores : Número de jugadores del partido
+     */
     public int getJugadores() {
       return this.jugadores;
     }
 
+    /* @brief Método que obtiene cuántos turnos se han realozado
+     * @author Nara, Javier, Esteban
+     * @ret int jugadas : Número de turnos que se han realizado
+     */
     public int getJugadas() {
       return this.jugadas;
     }
 
+    /* @brief Método que incrementa en 1 el número de turnos que se han realozado
+     * @author Nara, Javier, Esteban
+     */
     public void incrementarJugada() {
       this.jugadas++;
     }
 
+    /* @brief Método que obtiene cuántos turnos se deben realizar en el partido
+     * @author Nara, Javier, Esteban
+     * @ret int maxJugadas : Número de turnos que se deben realizar
+     */
     public int getMaxJugadas() {
       return this.maxJugadas;
     }
 
+    /* @brief Método que obtiene cómo se llevará a cabo el partido (por tiempo o por turnos)
+     * @author Nara, Javier, Esteban
+     * @ret int modalidad : Modalidad que se jugará
+     */
     public int getModalidad() {
       return this.modalidad;
     }
 
-    public void setValor( boolean valor ) {
-      this.valor = valor;
+    /* @brief Método que asigna qué texto debe salir por pantalla (ping o pong)
+     * @author Nara, Javier, Esteban
+     */
+    public void setTexto( boolean texto ) {
+      this.texto = texto;
     }
 
-    public boolean getValor() {
-      return this.valor;
+    /* @brief Método que obtiene qué texto debe salir por pantalla (ping o pong)
+     * @author Nara, Javier, Esteban
+     * @ret boolean texto : Valor que identifica qué texto saldrá por pantalla
+     */
+    public boolean getTexto() {
+      return this.texto;
     }
 
 }

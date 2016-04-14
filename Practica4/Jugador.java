@@ -8,33 +8,37 @@ public class Jugador implements Runnable  {
     private int numJugador;
     private Pelota pelota;
 
-    /** @brief Método constructor de la clase
+    /* @brief Método constructor de la clase
      * @author Nara, Javier, Esteban
-     * @arg int id : Número identificador del jugador a crear
-     * @arg Pelota pelota : Objeto pelota con la cual se realizará el juego
-     * @arg Semaphore semaforo : Objeto semáforo que
+     * @param int id : Número identificador del jugador a crear
+     * @param Pelota pelota : Objeto pelota con la cual se realizará el juego
+     * @param Semaphore semaforo : Objeto semáforo que
      */
     public Jugador( int id, Pelota pelota ) {
     	this.numJugador = id;
     	this.pelota = pelota;
     }
 
+    /* @brief Método run en el que se realzará ping o pong si es el turno del el Thread en ejecución y se desbloquearán todos los threads
+     * en caso contrario, se bloqueará el thread
+     * @author Nara, Javier, Esteban
+     */
     @Override
     public void run() {
       synchronized (pelota) {
       try {
         while(pelota.getEstado()) {
 
-              if (pelota.getPosesion() == this.numJugador) {
+              if (pelota.getTurno() == this.numJugador) {
 
-                  if(pelota.getValor() && pelota.getEstado()) {
+                  if(pelota.getTexto() && pelota.getEstado()) {
                       System.out.println("Jugador "+this.numJugador+": Ping!");
-                      pelota.setValor(false);
+                      pelota.setTexto(false);
                       pelota.incrementarJugada();
 
                   } else if(pelota.getEstado()) {
                       System.out.println("Jugador "+this.numJugador+": Pong!");
-                      pelota.setValor(true);
+                      pelota.setTexto(true);
                       pelota.incrementarJugada();
                   }
 
@@ -44,9 +48,9 @@ public class Jugador implements Runnable  {
                   }
 
                   if (this.numJugador < (pelota.getJugadores()-1)) {
-                       pelota.setPosesion(this.numJugador+1);
+                       pelota.setTurno(this.numJugador+1);
                   } else {
-                       pelota.setPosesion(0);
+                       pelota.setTurno(0);
                   }
                   pelota.notifyAll();
               } else {

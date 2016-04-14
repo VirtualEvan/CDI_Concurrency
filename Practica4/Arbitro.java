@@ -6,20 +6,17 @@ package Practica4;
 
 import java.util.Scanner;
 
-/**
-  \file
-  \brief Practica 4
-
-*/
+/* @brief Clase main, que decide quién comienza jugando, cuántos turnos, modo de juego e inicia el juego
+ * @author Nara, Javier, Esteban
+ */
 public class Arbitro {
   public static void main (String[] args){
 
-    // Ejercicio 4.3
-    int duracion = 1;            //Tiempo maximo de juego en segundos
-    int jugadores = 2;           //Numero de hilos que juegan el partido
-    int jugadorInicial = 0;      //Jugador que empieza
-    int turnos = 200;            //Numero maximo de jugadas permitidas
-    int modoJuego = 0;           //Tipo de juego: 0 por tiempo, 1 por numero de jugadas
+    int duracion = 1;
+    int jugadores = 2;
+    int jugadorInicial = 0;
+    int turnos = 200;
+    int modoJuego = 0;
 
     long comienzo = 0;
     long finalizacion = 0;
@@ -54,33 +51,32 @@ public class Arbitro {
         } while (turnos < 2);
 		}
 
-		  Pelota pelota = new Pelota(jugadorInicial, jugadores, turnos, modoJuego);
+	  Pelota pelota = new Pelota(jugadorInicial, jugadores, turnos, modoJuego);
 
-      Thread[] jugadoresPingPong = new Thread[jugadores];
-      Jugador[] players = new Jugador[jugadores];
+    Thread[] jugadoresPingPong = new Thread[jugadores];
+    Jugador[] players = new Jugador[jugadores];
 
-      for(int i = 0; i < jugadores; i++) {
-          jugadoresPingPong[i] = new Thread(players[i] = new Jugador(i, pelota));
-      }
+    for(int i = 0; i < jugadores; i++) {
+        jugadoresPingPong[i] = new Thread(players[i] = new Jugador(i, pelota));
+    }
 
-      int tiempoMilis = duracion*1000;
-      comienzo = System.currentTimeMillis();
+    int tiempoMilis = duracion*1000;
+    comienzo = System.currentTimeMillis();
 
 		try {
-                    for(int i = 0; i < jugadores; i++) {
-                        jugadoresPingPong[i].start();
-                    }
+        for(int i = 0; i < jugadores; i++) {
+            jugadoresPingPong[i].start();
+        }
 
-                    if(modoJuego == 0) {
-                        Thread.sleep(tiempoMilis);
-                        System.out.print("Fin del partido!");
-                        pelota.setEstado(false);
-                    } else {
-                        for(int i = 0; i < jugadores; i++) {
-                            //jugadoresPingPong[i].notifyAll();
-                            jugadoresPingPong[i].join();
-                        }
-                    }
+        if(modoJuego == 0) {
+            Thread.sleep(tiempoMilis);
+            System.out.print("Fin del partido!");
+            pelota.setEstado(false);
+        } else {
+            for(int i = 0; i < jugadores; i++) {
+                jugadoresPingPong[i].join();
+            }
+        }
 
 
       } catch(Exception ex){ pelota.setEstado(false);}
