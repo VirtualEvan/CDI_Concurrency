@@ -1,14 +1,14 @@
 package Practica4;
 
 
-/* @brief Clase que implementa los threads del Ping Pong
+/** @brief Clase que implementa los threads del Ping Pong
  * @author Nara, Javier, Esteban
  */
 public class Jugador implements Runnable  {
     private int numJugador;
     private Pelota pelota;
 
-    /* @brief Método constructor de la clase
+    /** @brief Método constructor de la clase
      * @author Nara, Javier, Esteban
      * @param int id : Número identificador del jugador a crear
      * @param Pelota pelota : Objeto pelota con la cual se realizará el juego
@@ -19,7 +19,7 @@ public class Jugador implements Runnable  {
     	this.pelota = pelota;
     }
 
-    /* @brief Método run en el que se realzará ping o pong si es el turno del el Thread en ejecución y se desbloquearán todos los threads
+    /** @brief Método run en el que se realzará ping o pong si es el turno del el Thread en ejecución y se desbloquearán todos los threads
      * en caso contrario, se bloqueará el thread
      * @author Nara, Javier, Esteban
      */

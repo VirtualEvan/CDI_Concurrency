@@ -6,7 +6,7 @@ package Practica4;
 
 import java.util.Scanner;
 
-/* @brief Clase main, que decide quién comienza jugando, cuántos turnos, modo de juego e inicia el juego
+/** @brief Clase main, que decide quién comienza jugando, cuántos turnos, modo de juego e inicia el juego
  * @author Nara, Javier, Esteban
  */
 public class Arbitro {

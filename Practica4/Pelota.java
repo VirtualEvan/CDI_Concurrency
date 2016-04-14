@@ -1,7 +1,7 @@
 package Practica4;
 
 
-/* @brief Clase que implementa el objeto Pelota para permitir jugar al Ping Pong
+/** @brief Clase que implementa el objeto Pelota para permitir jugar al Ping Pong
  * @author Nara, Javier, Esteban
  */
 public class Pelota {
@@ -13,7 +13,7 @@ public class Pelota {
     private int modalidad;
     private boolean texto;
 
-    /* @brief Método constructor de la clase
+    /** @brief Método constructor de la clase
      * @author Nara, Javier, Esteban
      * @param int turno : Número del jugador al que le toca jugar
      * @param int jugadores : Número de jugadores del partido
@@ -30,14 +30,14 @@ public class Pelota {
       this.texto = true;
     }
 
-    /* @brief Método que asinga el jugador al cuál le corresponde el turno
+    /** @brief Método que asinga el jugador al cuál le corresponde el turno
      * @author Nara, Javier, Esteban
      * @param int turno : Número del jugador al que le toca jugar
      */
     public void setTurno( int turno ) {
       this.turno = turno;
     }
-    /* @brief Método que obtiene el jugador al cuál le corresponde el turno
+    /** @brief Método que obtiene el jugador al cuál le corresponde el turno
      * @author Nara, Javier, Esteban
      * @ret int turno : Número del jugador al que le toca jugar
      */
@@ -45,7 +45,7 @@ public class Pelota {
       return this.turno;
     }
 
-    /* @brief Método que cambia el estado del juego (termina el juego)
+    /** @brief Método que cambia el estado del juego (termina el juego)
      * @author Nara, Javier, Esteban
      * @param boolean bool : Estado que tendrá el juego
      */
@@ -53,7 +53,7 @@ public class Pelota {
       this.estado = bool;
     }
 
-    /* @brief Método que obtiene el estado del juego (termina el juego)
+    /** @brief Método que obtiene el estado del juego (termina el juego)
      * @author Nara, Javier, Esteban
      * @ret int estado : Estado que tendrá el juego
      */
@@ -61,7 +61,7 @@ public class Pelota {
       return this.estado;
     }
 
-    /* @brief Método que obtiene cuántos jugadores hay en el partido
+    /** @brief Método que obtiene cuántos jugadores hay en el partido
      * @author Nara, Javier, Esteban
      * @ret int jugadores : Número de jugadores del partido
      */
@@ -69,7 +69,7 @@ public class Pelota {
       return this.jugadores;
     }
 
-    /* @brief Método que obtiene cuántos turnos se han realozado
+    /** @brief Método que obtiene cuántos turnos se han realozado
      * @author Nara, Javier, Esteban
      * @ret int jugadas : Número de turnos que se han realizado
      */
@@ -77,14 +77,14 @@ public class Pelota {
       return this.jugadas;
     }
 
-    /* @brief Método que incrementa en 1 el número de turnos que se han realozado
+    /** @brief Método que incrementa en 1 el número de turnos que se han realozado
      * @author Nara, Javier, Esteban
      */
     public void incrementarJugada() {
       this.jugadas++;
     }
 
-    /* @brief Método que obtiene cuántos turnos se deben realizar en el partido
+    /** @brief Método que obtiene cuántos turnos se deben realizar en el partido
      * @author Nara, Javier, Esteban
      * @ret int maxJugadas : Número de turnos que se deben realizar
      */
@@ -92,7 +92,7 @@ public class Pelota {
       return this.maxJugadas;
     }
 
-    /* @brief Método que obtiene cómo se llevará a cabo el partido (por tiempo o por turnos)
+    /** @brief Método que obtiene cómo se llevará a cabo el partido (por tiempo o por turnos)
      * @author Nara, Javier, Esteban
      * @ret int modalidad : Modalidad que se jugará
      */
@@ -100,14 +100,14 @@ public class Pelota {
       return this.modalidad;
     }
 
-    /* @brief Método que asigna qué texto debe salir por pantalla (ping o pong)
+    /** @brief Método que asigna qué texto debe salir por pantalla (ping o pong)
      * @author Nara, Javier, Esteban
      */
     public void setTexto( boolean texto ) {
       this.texto = texto;
     }
 
-    /* @brief Método que obtiene qué texto debe salir por pantalla (ping o pong)
+    /** @brief Método que obtiene qué texto debe salir por pantalla (ping o pong)
      * @author Nara, Javier, Esteban
      * @ret boolean texto : Valor que identifica qué texto saldrá por pantalla
      */
