@@ -1,0 +1,266 @@
+\hypertarget{class_practica4_1_1_pelota}{}\section{Practica4.\+Pelota Class Reference}
+\label{class_practica4_1_1_pelota}\index{Practica4.\+Pelota@{Practica4.\+Pelota}}
+
+
+Clase que implementa el objeto \hyperlink{class_practica4_1_1_pelota}{Pelota} para permitir jugar al Ping Pong.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_practica4_1_1_pelota_a9bba2cb1e5adaf75e6f994d1e888c510}{Pelota} (int turno, int jugadores, int max\+Jugadas, int modalidad)
+\begin{DoxyCompactList}\small\item\em Método constructor de la clase. \end{DoxyCompactList}\item 
+void \hyperlink{class_practica4_1_1_pelota_ab11c5110d330f07f4ae8c6db9a4ffc10}{set\+Turno} (int turno)
+\begin{DoxyCompactList}\small\item\em Método que asinga el jugador al cuál le corresponde el turno. \end{DoxyCompactList}\item 
+int \hyperlink{class_practica4_1_1_pelota_a188f4792d7cba45b3ccd838712f2da45}{get\+Turno} ()
+\begin{DoxyCompactList}\small\item\em Método que obtiene el jugador al cuál le corresponde el turno. \end{DoxyCompactList}\item 
+void \hyperlink{class_practica4_1_1_pelota_a7a63bb6a91aa761d199bf4f52121929c}{set\+Estado} (boolean bool)
+\begin{DoxyCompactList}\small\item\em Método que cambia el estado del juego (termina el juego) \end{DoxyCompactList}\item 
+boolean \hyperlink{class_practica4_1_1_pelota_ac35ca764f2c6e26db922a6f5c726fc18}{get\+Estado} ()
+\begin{DoxyCompactList}\small\item\em Método que obtiene el estado del juego (termina el juego) \end{DoxyCompactList}\item 
+int \hyperlink{class_practica4_1_1_pelota_a1149eb47d7a21c21710d00e5c223e527}{get\+Jugadores} ()
+\begin{DoxyCompactList}\small\item\em Método que obtiene cuántos jugadores hay en el partido. \end{DoxyCompactList}\item 
+int \hyperlink{class_practica4_1_1_pelota_ad72f2a2d2a0b26f3b19ace9ed6cf65d3}{get\+Jugadas} ()
+\begin{DoxyCompactList}\small\item\em Método que obtiene cuántos turnos se han realozado. \end{DoxyCompactList}\item 
+void \hyperlink{class_practica4_1_1_pelota_add2d52594c65fce854d719668d923721}{incrementar\+Jugada} ()
+\begin{DoxyCompactList}\small\item\em Método que incrementa en 1 el número de turnos que se han realozado. \end{DoxyCompactList}\item 
+int \hyperlink{class_practica4_1_1_pelota_ad9423a6e3d425befd4c6809f0a7739a3}{get\+Max\+Jugadas} ()
+\begin{DoxyCompactList}\small\item\em Método que obtiene cuántos turnos se deben realizar en el partido. \end{DoxyCompactList}\item 
+int \hyperlink{class_practica4_1_1_pelota_aee2a61575064881875d6bcfc836f4fa9}{get\+Modalidad} ()
+\begin{DoxyCompactList}\small\item\em Método que obtiene cómo se llevará a cabo el partido (por tiempo o por turnos) \end{DoxyCompactList}\item 
+void \hyperlink{class_practica4_1_1_pelota_aca64e664ed97d572b2965dad0f3a6b7c}{set\+Texto} (boolean texto)
+\begin{DoxyCompactList}\small\item\em Método que asigna qué texto debe salir por pantalla (ping o pong) \end{DoxyCompactList}\item 
+boolean \hyperlink{class_practica4_1_1_pelota_ac45780f814a1c62684087f68a18b6f1e}{get\+Texto} ()
+\begin{DoxyCompactList}\small\item\em Método que obtiene qué texto debe salir por pantalla (ping o pong) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase que implementa el objeto \hyperlink{class_practica4_1_1_pelota}{Pelota} para permitir jugar al Ping Pong. 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_practica4_1_1_pelota_a9bba2cb1e5adaf75e6f994d1e888c510}{}\index{Practica4\+::\+Pelota@{Practica4\+::\+Pelota}!Pelota@{Pelota}}
+\index{Pelota@{Pelota}!Practica4\+::\+Pelota@{Practica4\+::\+Pelota}}
+\subsubsection[{Pelota}]{\setlength{\rightskip}{0pt plus 5cm}Practica4.\+Pelota.\+Pelota (
+\begin{DoxyParamCaption}
+\item[{int}]{turno, }
+\item[{int}]{jugadores, }
+\item[{int}]{max\+Jugadas, }
+\item[{int}]{modalidad}
+\end{DoxyParamCaption}
+)}\label{class_practica4_1_1_pelota_a9bba2cb1e5adaf75e6f994d1e888c510}
+
+
+Método constructor de la clase. 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em turno} & \+: Número del jugador al que le toca jugar \\
+\hline
+{\em jugadores} & \+: Número de jugadores del partido \\
+\hline
+{\em max\+Jugadas} & \+: Número de turnos que se realizarán en el juego \\
+\hline
+{\em modalidad} & \+: Identificador que indica si el juego será por turnos o por tiempo \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_practica4_1_1_pelota_ac35ca764f2c6e26db922a6f5c726fc18}{}\index{Practica4\+::\+Pelota@{Practica4\+::\+Pelota}!get\+Estado@{get\+Estado}}
+\index{get\+Estado@{get\+Estado}!Practica4\+::\+Pelota@{Practica4\+::\+Pelota}}
+\subsubsection[{get\+Estado}]{\setlength{\rightskip}{0pt plus 5cm}boolean Practica4.\+Pelota.\+get\+Estado (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_practica4_1_1_pelota_ac35ca764f2c6e26db922a6f5c726fc18}
+
+
+Método que obtiene el estado del juego (termina el juego) 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+int estado \+: Estado que tendrá el juego 
+\end{DoxyReturn}
+\hypertarget{class_practica4_1_1_pelota_ad72f2a2d2a0b26f3b19ace9ed6cf65d3}{}\index{Practica4\+::\+Pelota@{Practica4\+::\+Pelota}!get\+Jugadas@{get\+Jugadas}}
+\index{get\+Jugadas@{get\+Jugadas}!Practica4\+::\+Pelota@{Practica4\+::\+Pelota}}
+\subsubsection[{get\+Jugadas}]{\setlength{\rightskip}{0pt plus 5cm}int Practica4.\+Pelota.\+get\+Jugadas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_practica4_1_1_pelota_ad72f2a2d2a0b26f3b19ace9ed6cf65d3}
+
+
+Método que obtiene cuántos turnos se han realozado. 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+jugadas \+: Número de turnos que se han realizado 
+\end{DoxyReturn}
+\hypertarget{class_practica4_1_1_pelota_a1149eb47d7a21c21710d00e5c223e527}{}\index{Practica4\+::\+Pelota@{Practica4\+::\+Pelota}!get\+Jugadores@{get\+Jugadores}}
+\index{get\+Jugadores@{get\+Jugadores}!Practica4\+::\+Pelota@{Practica4\+::\+Pelota}}
+\subsubsection[{get\+Jugadores}]{\setlength{\rightskip}{0pt plus 5cm}int Practica4.\+Pelota.\+get\+Jugadores (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_practica4_1_1_pelota_a1149eb47d7a21c21710d00e5c223e527}
+
+
+Método que obtiene cuántos jugadores hay en el partido. 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+jugadores \+: Número de jugadores del partido 
+\end{DoxyReturn}
+\hypertarget{class_practica4_1_1_pelota_ad9423a6e3d425befd4c6809f0a7739a3}{}\index{Practica4\+::\+Pelota@{Practica4\+::\+Pelota}!get\+Max\+Jugadas@{get\+Max\+Jugadas}}
+\index{get\+Max\+Jugadas@{get\+Max\+Jugadas}!Practica4\+::\+Pelota@{Practica4\+::\+Pelota}}
+\subsubsection[{get\+Max\+Jugadas}]{\setlength{\rightskip}{0pt plus 5cm}int Practica4.\+Pelota.\+get\+Max\+Jugadas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_practica4_1_1_pelota_ad9423a6e3d425befd4c6809f0a7739a3}
+
+
+Método que obtiene cuántos turnos se deben realizar en el partido. 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+max\+Jugadas \+: Número de turnos que se deben realizar 
+\end{DoxyReturn}
+\hypertarget{class_practica4_1_1_pelota_aee2a61575064881875d6bcfc836f4fa9}{}\index{Practica4\+::\+Pelota@{Practica4\+::\+Pelota}!get\+Modalidad@{get\+Modalidad}}
+\index{get\+Modalidad@{get\+Modalidad}!Practica4\+::\+Pelota@{Practica4\+::\+Pelota}}
+\subsubsection[{get\+Modalidad}]{\setlength{\rightskip}{0pt plus 5cm}int Practica4.\+Pelota.\+get\+Modalidad (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_practica4_1_1_pelota_aee2a61575064881875d6bcfc836f4fa9}
+
+
+Método que obtiene cómo se llevará a cabo el partido (por tiempo o por turnos) 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+modalidad \+: Modalidad que se jugará 
+\end{DoxyReturn}
+\hypertarget{class_practica4_1_1_pelota_ac45780f814a1c62684087f68a18b6f1e}{}\index{Practica4\+::\+Pelota@{Practica4\+::\+Pelota}!get\+Texto@{get\+Texto}}
+\index{get\+Texto@{get\+Texto}!Practica4\+::\+Pelota@{Practica4\+::\+Pelota}}
+\subsubsection[{get\+Texto}]{\setlength{\rightskip}{0pt plus 5cm}boolean Practica4.\+Pelota.\+get\+Texto (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_practica4_1_1_pelota_ac45780f814a1c62684087f68a18b6f1e}
+
+
+Método que obtiene qué texto debe salir por pantalla (ping o pong) 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+texto \+: Valor que identifica qué texto saldrá por pantalla 
+\end{DoxyReturn}
+\hypertarget{class_practica4_1_1_pelota_a188f4792d7cba45b3ccd838712f2da45}{}\index{Practica4\+::\+Pelota@{Practica4\+::\+Pelota}!get\+Turno@{get\+Turno}}
+\index{get\+Turno@{get\+Turno}!Practica4\+::\+Pelota@{Practica4\+::\+Pelota}}
+\subsubsection[{get\+Turno}]{\setlength{\rightskip}{0pt plus 5cm}int Practica4.\+Pelota.\+get\+Turno (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_practica4_1_1_pelota_a188f4792d7cba45b3ccd838712f2da45}
+
+
+Método que obtiene el jugador al cuál le corresponde el turno. 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+turno \+: Número del jugador al que le toca jugar 
+\end{DoxyReturn}
+\hypertarget{class_practica4_1_1_pelota_add2d52594c65fce854d719668d923721}{}\index{Practica4\+::\+Pelota@{Practica4\+::\+Pelota}!incrementar\+Jugada@{incrementar\+Jugada}}
+\index{incrementar\+Jugada@{incrementar\+Jugada}!Practica4\+::\+Pelota@{Practica4\+::\+Pelota}}
+\subsubsection[{incrementar\+Jugada}]{\setlength{\rightskip}{0pt plus 5cm}void Practica4.\+Pelota.\+incrementar\+Jugada (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_practica4_1_1_pelota_add2d52594c65fce854d719668d923721}
+
+
+Método que incrementa en 1 el número de turnos que se han realozado. 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+\hypertarget{class_practica4_1_1_pelota_a7a63bb6a91aa761d199bf4f52121929c}{}\index{Practica4\+::\+Pelota@{Practica4\+::\+Pelota}!set\+Estado@{set\+Estado}}
+\index{set\+Estado@{set\+Estado}!Practica4\+::\+Pelota@{Practica4\+::\+Pelota}}
+\subsubsection[{set\+Estado}]{\setlength{\rightskip}{0pt plus 5cm}void Practica4.\+Pelota.\+set\+Estado (
+\begin{DoxyParamCaption}
+\item[{boolean}]{bool}
+\end{DoxyParamCaption}
+)}\label{class_practica4_1_1_pelota_a7a63bb6a91aa761d199bf4f52121929c}
+
+
+Método que cambia el estado del juego (termina el juego) 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & \+: Estado que tendrá el juego \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_practica4_1_1_pelota_aca64e664ed97d572b2965dad0f3a6b7c}{}\index{Practica4\+::\+Pelota@{Practica4\+::\+Pelota}!set\+Texto@{set\+Texto}}
+\index{set\+Texto@{set\+Texto}!Practica4\+::\+Pelota@{Practica4\+::\+Pelota}}
+\subsubsection[{set\+Texto}]{\setlength{\rightskip}{0pt plus 5cm}void Practica4.\+Pelota.\+set\+Texto (
+\begin{DoxyParamCaption}
+\item[{boolean}]{texto}
+\end{DoxyParamCaption}
+)}\label{class_practica4_1_1_pelota_aca64e664ed97d572b2965dad0f3a6b7c}
+
+
+Método que asigna qué texto debe salir por pantalla (ping o pong) 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+\hypertarget{class_practica4_1_1_pelota_ab11c5110d330f07f4ae8c6db9a4ffc10}{}\index{Practica4\+::\+Pelota@{Practica4\+::\+Pelota}!set\+Turno@{set\+Turno}}
+\index{set\+Turno@{set\+Turno}!Practica4\+::\+Pelota@{Practica4\+::\+Pelota}}
+\subsubsection[{set\+Turno}]{\setlength{\rightskip}{0pt plus 5cm}void Practica4.\+Pelota.\+set\+Turno (
+\begin{DoxyParamCaption}
+\item[{int}]{turno}
+\end{DoxyParamCaption}
+)}\label{class_practica4_1_1_pelota_ab11c5110d330f07f4ae8c6db9a4ffc10}
+
+
+Método que asinga el jugador al cuál le corresponde el turno. 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em turno} & \+: Número del jugador al que le toca jugar \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Pelota.\+java\end{DoxyCompactItemize}
