@@ -8,7 +8,9 @@ import java.io.*;
 import java.net.*;
 import javax.imageio.ImageIO;
 
-
+/** @brief Clase que contiene el main que inicia el servidor y controla los threads que reciben las imágenes
+ * @author Nara, Javier, Esteban
+ */
 public class Server extends Thread {
     //static boolean done = false;
     static int width = 512;
@@ -26,8 +28,14 @@ public class Server extends Thread {
     private ObjectOutputStream output;
     private ObjectInputStream input;
 
-
-    public Server(Socket socket,int partes,Iteration iteration, Picture img) {
+    /** @brief Método constructor de la clase
+     * @author Nara, Javier, Esteban
+     * @param socket : Socket
+     * @param iterations : Número de iteraciones necesarias para rellenar la foto
+     * @param iteration : Iteración recibida
+     * @param img : Imagen actual que se aplicará
+     */
+    public Server(Socket socket,int iterations,Iteration iteration, Picture img) {
       this.socket = socket;
       this.start = iteration.start;
   		this.end = iteration.end;
@@ -40,7 +48,9 @@ public class Server extends Thread {
       }
     }
 
-
+    /** @brief Método que realiza la desconexión
+     * @author Nara, Javier, Esteban
+     */
     public void desconnectar() {
       try {
         socket.close();
@@ -49,7 +59,9 @@ public class Server extends Thread {
       }
     }
 
-
+    /** @brief Método run que gestiona los threads en el servidor
+     * @author Nara, Javier, Esteban
+     */
     @Override
     public void run(){
       try {
@@ -62,8 +74,8 @@ public class Server extends Thread {
           if(dataGet.getAccion().equals("Request"))
           {
 
-          	Data paqueteE = new Data("Response", start, end, iterations);
-              output.writeObject(paqueteE);
+          	Data dataReturn = new Data("Response", start, end, iterations);
+              output.writeObject(dataReturn);
           }
           byte v [] =  (byte[]) input.readObject();
           ByteArrayInputStream array = new ByteArrayInputStream( v );
@@ -74,7 +86,7 @@ public class Server extends Thread {
               finalPic.set(i, j+start, foto.get(i, j));
             }
           }
-          System.out.println(socket + " -->  Conexion terminada. ");
+          System.out.println(socket + " Conexion finalizada. ");
           finalPic.show();
       } catch (IOException | ClassNotFoundException ex) {
         Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
@@ -84,6 +96,10 @@ public class Server extends Thread {
     }
 
 
+    /** @brief Método main de la clase
+     * @author Nara, Javier, Esteban
+     * @param args[] : Array de argumentos pasados como parámetros
+     */
     public static void main(String args[]){
         Picture image = new Picture(width,length);
         Scanner input = new Scanner(System.in);
@@ -147,7 +163,7 @@ public class Server extends Thread {
           System.out.println("Esperando conecciones en el puerto 15000");
           while (true) {
             socket = connection.accept();
-            System.out.println(socket+ " -->  Nueva conexi�n entrante.");
+            System.out.println(socket+ " Conexión establecida");
             Server thread = new Server(socket,  iterations, iterator.next(), image);
             thread.start();
             thread.join();
