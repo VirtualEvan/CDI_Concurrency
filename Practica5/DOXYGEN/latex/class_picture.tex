@@ -1,0 +1,336 @@
+\hypertarget{class_picture}{}\section{Picture Class Reference}
+\label{class_picture}\index{Picture@{Picture}}
+
+
+Inheritance diagram for Picture\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{class_picture__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Picture\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{class_picture__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_picture_a07142473b84fdbdb91cb7025f7657027}{Picture} (int width, int height)
+\item 
+\hypertarget{class_picture_a4ecc0945f31dc27563195900e17c3a0a}{}{\bfseries Picture} (Buffered\+Image foto)\label{class_picture_a4ecc0945f31dc27563195900e17c3a0a}
+
+\item 
+\hyperlink{class_picture_ae1d35e34123c7658b727ca21bf79fec3}{Picture} (\hyperlink{class_picture}{Picture} picture)
+\item 
+\hyperlink{class_picture_a4ac461d816eb819710e51c139610ba68}{Picture} (String filename)
+\item 
+\hyperlink{class_picture_a1c4fa93e98dd54f073309a1e314b2ae9}{Picture} (File file)
+\item 
+J\+Label \hyperlink{class_picture_a23492bae036cfd015d79a0669f084bf5}{get\+J\+Label} ()
+\item 
+void \hyperlink{class_picture_a562666a5d8b36423da0aec5e92b9c078}{set\+Origin\+Upper\+Left} ()
+\item 
+void \hyperlink{class_picture_aa1513709f2fe6a54457294a5c271f9ef}{set\+Origin\+Lower\+Left} ()
+\item 
+void \hyperlink{class_picture_a7e2e47c6290831d31e9d0d6fae2e548d}{show} ()
+\item 
+int \hyperlink{class_picture_afca117450ab43ed8738b7ffa4fa6a2f7}{height} ()
+\item 
+int \hyperlink{class_picture_a4db9d5260d7c15056c85da767865b870}{width} ()
+\item 
+Color \hyperlink{class_picture_a8719d97ffafd78157647676cc4395f1d}{get} (int col, int row)
+\item 
+void \hyperlink{class_picture_a4e963f9fe2209d76d469428b458d6deb}{set} (int col, int row, Color color)
+\item 
+boolean \hyperlink{class_picture_af84a5e004ddf9d82121865290b049f97}{equals} (Object other)
+\item 
+int \hyperlink{class_picture_a768e1bf696a81fb573bd06c1a37df692}{hash\+Code} ()
+\item 
+void \hyperlink{class_picture_aba5d1df6955e8af12b889817fcab91af}{save} (String name)
+\item 
+void \hyperlink{class_picture_a0d547de85f185ad28e778ca0b108cf60}{save} (File file)
+\item 
+void \hyperlink{class_picture_addcd776af429ddb0593b63a6c8fb3253}{action\+Performed} (Action\+Event e)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_picture_ae507036e93b27aba4d1e06e44308798c}{main} (String\mbox{[}$\,$\mbox{]} args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides methods for manipulating individual pixels of an image. The original image can be read from a {\ttfamily .jpg}, {\ttfamily .gif}, or {\ttfamily .png} file or the user can create a blank image of a given size. This class includes methods for inputplaying the image in a window on the screen or saving it to a file. 
+
+Pixel ({\itshape x}, {\itshape y}) is column {\itshape x} and row {\itshape y}. By default, the origin (0, 0) is upper left, which is a common convention in image processing. The method {\ttfamily \hyperlink{class_picture_aa1513709f2fe6a54457294a5c271f9ef}{set\+Origin\+Lower\+Left()}} change the origin to the lower left. 
+
+For additional documentation, see \href{http://introcs.cs.princeton.edu/31datatype}{\tt Section 3.\+1} of {\itshape Introduction to Programming in Java\+: An Interinputciplinary Approach} by Robert Sedgewick and Kevin Wayne.
+
+\begin{DoxyAuthor}{Author}
+Robert Sedgewick 
+
+Kevin Wayne 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_picture_a07142473b84fdbdb91cb7025f7657027}{}\index{Picture@{Picture}!Picture@{Picture}}
+\index{Picture@{Picture}!Picture@{Picture}}
+\subsubsection[{Picture}]{\setlength{\rightskip}{0pt plus 5cm}Picture.\+Picture (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}\label{class_picture_a07142473b84fdbdb91cb7025f7657027}
+Initializes a blank {\ttfamily width}-\/by-\/{\ttfamily height} picture, with {\ttfamily width} columns and {\ttfamily height} rows, where each pixel is black.
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & the width of the picture \\
+\hline
+{\em height} & the height of the picture \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_picture_ae1d35e34123c7658b727ca21bf79fec3}{}\index{Picture@{Picture}!Picture@{Picture}}
+\index{Picture@{Picture}!Picture@{Picture}}
+\subsubsection[{Picture}]{\setlength{\rightskip}{0pt plus 5cm}Picture.\+Picture (
+\begin{DoxyParamCaption}
+\item[{{\bf Picture}}]{picture}
+\end{DoxyParamCaption}
+)}\label{class_picture_ae1d35e34123c7658b727ca21bf79fec3}
+Initializes a new picture that is a deep copy of the argument picture.
+
+
+\begin{DoxyParams}{Parameters}
+{\em picture} & the picture to copy \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_picture_a4ac461d816eb819710e51c139610ba68}{}\index{Picture@{Picture}!Picture@{Picture}}
+\index{Picture@{Picture}!Picture@{Picture}}
+\subsubsection[{Picture}]{\setlength{\rightskip}{0pt plus 5cm}Picture.\+Picture (
+\begin{DoxyParamCaption}
+\item[{String}]{filename}
+\end{DoxyParamCaption}
+)}\label{class_picture_a4ac461d816eb819710e51c139610ba68}
+Initializes a picture by reading from a file or U\+R\+L.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the file (.png, .gif, or .jpg) or U\+R\+L. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_picture_a1c4fa93e98dd54f073309a1e314b2ae9}{}\index{Picture@{Picture}!Picture@{Picture}}
+\index{Picture@{Picture}!Picture@{Picture}}
+\subsubsection[{Picture}]{\setlength{\rightskip}{0pt plus 5cm}Picture.\+Picture (
+\begin{DoxyParamCaption}
+\item[{File}]{file}
+\end{DoxyParamCaption}
+)}\label{class_picture_a1c4fa93e98dd54f073309a1e314b2ae9}
+Initializes a picture by reading in a .png, .gif, or .jpg from a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_picture_addcd776af429ddb0593b63a6c8fb3253}{}\index{Picture@{Picture}!action\+Performed@{action\+Performed}}
+\index{action\+Performed@{action\+Performed}!Picture@{Picture}}
+\subsubsection[{action\+Performed}]{\setlength{\rightskip}{0pt plus 5cm}void Picture.\+action\+Performed (
+\begin{DoxyParamCaption}
+\item[{Action\+Event}]{e}
+\end{DoxyParamCaption}
+)}\label{class_picture_addcd776af429ddb0593b63a6c8fb3253}
+Opens a save dialog box when the user selects \char`\"{}\+Save As\char`\"{} from the menu. \hypertarget{class_picture_af84a5e004ddf9d82121865290b049f97}{}\index{Picture@{Picture}!equals@{equals}}
+\index{equals@{equals}!Picture@{Picture}}
+\subsubsection[{equals}]{\setlength{\rightskip}{0pt plus 5cm}boolean Picture.\+equals (
+\begin{DoxyParamCaption}
+\item[{Object}]{other}
+\end{DoxyParamCaption}
+)}\label{class_picture_af84a5e004ddf9d82121865290b049f97}
+Returns true if this picture is equal to the argument picture.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & the other picture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if this picture is the same dimension as {\ttfamily other} and if all pixels have the same color; {\ttfamily false} otherwise 
+\end{DoxyReturn}
+\hypertarget{class_picture_a8719d97ffafd78157647676cc4395f1d}{}\index{Picture@{Picture}!get@{get}}
+\index{get@{get}!Picture@{Picture}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}Color Picture.\+get (
+\begin{DoxyParamCaption}
+\item[{int}]{col, }
+\item[{int}]{row}
+\end{DoxyParamCaption}
+)}\label{class_picture_a8719d97ffafd78157647676cc4395f1d}
+Returns the color of pixel ({\ttfamily col}, {\ttfamily row}).
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & the column index \\
+\hline
+{\em row} & the row index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the color of pixel ({\ttfamily col}, {\ttfamily row}) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Index\+Out\+Of\+Bounds\+Exception} & unless both 0 {$\le$} {\ttfamily col} $<$ {\ttfamily width} and 0 {$\le$} {\ttfamily row} $<$ {\ttfamily height} \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_picture_a23492bae036cfd015d79a0669f084bf5}{}\index{Picture@{Picture}!get\+J\+Label@{get\+J\+Label}}
+\index{get\+J\+Label@{get\+J\+Label}!Picture@{Picture}}
+\subsubsection[{get\+J\+Label}]{\setlength{\rightskip}{0pt plus 5cm}J\+Label Picture.\+get\+J\+Label (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_picture_a23492bae036cfd015d79a0669f084bf5}
+Returns a J\+Label containing this picture, for embedding in a J\+Panel, J\+Frame or other G\+U\+I widget.
+
+\begin{DoxyReturn}{Returns}
+the {\ttfamily J\+Label} 
+\end{DoxyReturn}
+\hypertarget{class_picture_a768e1bf696a81fb573bd06c1a37df692}{}\index{Picture@{Picture}!hash\+Code@{hash\+Code}}
+\index{hash\+Code@{hash\+Code}!Picture@{Picture}}
+\subsubsection[{hash\+Code}]{\setlength{\rightskip}{0pt plus 5cm}int Picture.\+hash\+Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_picture_a768e1bf696a81fb573bd06c1a37df692}
+This operation is not supported because pictures are mutable.
+
+\begin{DoxyReturn}{Returns}
+does not return a value 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unsupported\+Operation\+Exception} & if called \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_picture_afca117450ab43ed8738b7ffa4fa6a2f7}{}\index{Picture@{Picture}!height@{height}}
+\index{height@{height}!Picture@{Picture}}
+\subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}int Picture.\+height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_picture_afca117450ab43ed8738b7ffa4fa6a2f7}
+Returns the height of the picture.
+
+\begin{DoxyReturn}{Returns}
+the height of the picture (in pixels) 
+\end{DoxyReturn}
+\hypertarget{class_picture_ae507036e93b27aba4d1e06e44308798c}{}\index{Picture@{Picture}!main@{main}}
+\index{main@{main}!Picture@{Picture}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void Picture.\+main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_picture_ae507036e93b27aba4d1e06e44308798c}
+Unit tests this {\ttfamily \hyperlink{class_picture}{Picture}} data type. Reads a picture specified by the command-\/line argument, and shows it in a window on the screen. \hypertarget{class_picture_aba5d1df6955e8af12b889817fcab91af}{}\index{Picture@{Picture}!save@{save}}
+\index{save@{save}!Picture@{Picture}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}void Picture.\+save (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_picture_aba5d1df6955e8af12b889817fcab91af}
+Saves the picture to a file in a standard image format. The filetype must be .png or .jpg.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the file \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_picture_a0d547de85f185ad28e778ca0b108cf60}{}\index{Picture@{Picture}!save@{save}}
+\index{save@{save}!Picture@{Picture}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}void Picture.\+save (
+\begin{DoxyParamCaption}
+\item[{File}]{file}
+\end{DoxyParamCaption}
+)}\label{class_picture_a0d547de85f185ad28e778ca0b108cf60}
+Saves the picture to a file in a P\+N\+G or J\+P\+E\+G image format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_picture_a4e963f9fe2209d76d469428b458d6deb}{}\index{Picture@{Picture}!set@{set}}
+\index{set@{set}!Picture@{Picture}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void Picture.\+set (
+\begin{DoxyParamCaption}
+\item[{int}]{col, }
+\item[{int}]{row, }
+\item[{Color}]{color}
+\end{DoxyParamCaption}
+)}\label{class_picture_a4e963f9fe2209d76d469428b458d6deb}
+Sets the color of pixel ({\ttfamily col}, {\ttfamily row}) to given color.
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & the column index \\
+\hline
+{\em row} & the row index \\
+\hline
+{\em color} & the color \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Index\+Out\+Of\+Bounds\+Exception} & unless both 0 {$\le$} {\ttfamily col} $<$ {\ttfamily width} and 0 {$\le$} {\ttfamily row} $<$ {\ttfamily height} \\
+\hline
+{\em Null\+Pointer\+Exception} & if {\ttfamily color} is {\ttfamily null} \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_picture_aa1513709f2fe6a54457294a5c271f9ef}{}\index{Picture@{Picture}!set\+Origin\+Lower\+Left@{set\+Origin\+Lower\+Left}}
+\index{set\+Origin\+Lower\+Left@{set\+Origin\+Lower\+Left}!Picture@{Picture}}
+\subsubsection[{set\+Origin\+Lower\+Left}]{\setlength{\rightskip}{0pt plus 5cm}void Picture.\+set\+Origin\+Lower\+Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_picture_aa1513709f2fe6a54457294a5c271f9ef}
+Sets the origin to be the lower left pixel. \hypertarget{class_picture_a562666a5d8b36423da0aec5e92b9c078}{}\index{Picture@{Picture}!set\+Origin\+Upper\+Left@{set\+Origin\+Upper\+Left}}
+\index{set\+Origin\+Upper\+Left@{set\+Origin\+Upper\+Left}!Picture@{Picture}}
+\subsubsection[{set\+Origin\+Upper\+Left}]{\setlength{\rightskip}{0pt plus 5cm}void Picture.\+set\+Origin\+Upper\+Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_picture_a562666a5d8b36423da0aec5e92b9c078}
+Sets the origin to be the upper left pixel. This is the default. \hypertarget{class_picture_a7e2e47c6290831d31e9d0d6fae2e548d}{}\index{Picture@{Picture}!show@{show}}
+\index{show@{show}!Picture@{Picture}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Picture.\+show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_picture_a7e2e47c6290831d31e9d0d6fae2e548d}
+inputplays the picture in a window on the screen. \hypertarget{class_picture_a4db9d5260d7c15056c85da767865b870}{}\index{Picture@{Picture}!width@{width}}
+\index{width@{width}!Picture@{Picture}}
+\subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}int Picture.\+width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_picture_a4db9d5260d7c15056c85da767865b870}
+Returns the width of the picture.
+
+\begin{DoxyReturn}{Returns}
+the width of the picture (in pixels) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Picture.\+java\end{DoxyCompactItemize}

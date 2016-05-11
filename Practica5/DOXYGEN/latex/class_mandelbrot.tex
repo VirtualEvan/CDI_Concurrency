@@ -1,0 +1,135 @@
+\hypertarget{class_mandelbrot}{}\section{Mandelbrot Class Reference}
+\label{class_mandelbrot}\index{Mandelbrot@{Mandelbrot}}
+
+
+Clase que realiza el cálculo de \hyperlink{class_mandelbrot}{Mandelbrot}.  
+
+
+
+
+Collaboration diagram for Mandelbrot\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_mandelbrot__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_mandelbrot_a09830bd77bc96c054e4e453e8326fda1}{Mandelbrot} (double x, double y, double s, int n, int m, int iterations)
+\begin{DoxyCompactList}\small\item\em Método constructor de la clase. \end{DoxyCompactList}\item 
+Buffered\+Image \hyperlink{class_mandelbrot_a51a2075937f0553564a5040f44070500}{realizar\+Fractal} (int start, int end, int width)
+\begin{DoxyCompactList}\small\item\em Método que crea el fractal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{class_mandelbrot_a5f0b4399e850a94193d87e03cca38736}{mand} (\hyperlink{class_complex}{Complex} z0, int max)
+\begin{DoxyCompactList}\small\item\em Método que realiza el cálculo de Nabdekbrot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase que realiza el cálculo de \hyperlink{class_mandelbrot}{Mandelbrot}. 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_mandelbrot_a09830bd77bc96c054e4e453e8326fda1}{}\index{Mandelbrot@{Mandelbrot}!Mandelbrot@{Mandelbrot}}
+\index{Mandelbrot@{Mandelbrot}!Mandelbrot@{Mandelbrot}}
+\subsubsection[{Mandelbrot}]{\setlength{\rightskip}{0pt plus 5cm}Mandelbrot.\+Mandelbrot (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{s, }
+\item[{int}]{n, }
+\item[{int}]{m, }
+\item[{int}]{iterations}
+\end{DoxyParamCaption}
+)}\label{class_mandelbrot_a09830bd77bc96c054e4e453e8326fda1}
+
+
+Método constructor de la clase. 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: Valor de x \\
+\hline
+{\em y} & \+: Valor de y \\
+\hline
+{\em s} & \+: Tamaño de la iteración \\
+\hline
+{\em n} & \+: Tamaño de los lados de la imagen \\
+\hline
+{\em m} & \+: Número máximo de iteraciones \\
+\hline
+{\em iterations} & \+: Número de iteraciones \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_mandelbrot_a5f0b4399e850a94193d87e03cca38736}{}\index{Mandelbrot@{Mandelbrot}!mand@{mand}}
+\index{mand@{mand}!Mandelbrot@{Mandelbrot}}
+\subsubsection[{mand}]{\setlength{\rightskip}{0pt plus 5cm}static int Mandelbrot.\+mand (
+\begin{DoxyParamCaption}
+\item[{{\bf Complex}}]{z0, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_mandelbrot_a5f0b4399e850a94193d87e03cca38736}
+
+
+Método que realiza el cálculo de Nabdekbrot. 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em z0} & \+: Número complejo para realizar el cálculo \\
+\hline
+{\em max} & \+: Número máximo de iteraciones \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+max \+: Nuevo Número máximo de iteraciones 
+\end{DoxyReturn}
+\hypertarget{class_mandelbrot_a51a2075937f0553564a5040f44070500}{}\index{Mandelbrot@{Mandelbrot}!realizar\+Fractal@{realizar\+Fractal}}
+\index{realizar\+Fractal@{realizar\+Fractal}!Mandelbrot@{Mandelbrot}}
+\subsubsection[{realizar\+Fractal}]{\setlength{\rightskip}{0pt plus 5cm}Buffered\+Image Mandelbrot.\+realizar\+Fractal (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end, }
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)}\label{class_mandelbrot_a51a2075937f0553564a5040f44070500}
+
+
+Método que crea el fractal. 
+
+\begin{DoxyAuthor}{Author}
+Nara, Javier, Esteban 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em start} & \+: Coordenada Y donde comienza la Iteracion \\
+\hline
+{\em end} & \+: Coordenada Y donde acaba la Iteracion \\
+\hline
+{\em width} & \+: Ancho total de la imagen de la Iteración \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: Imagen pic 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Mandelbrot.\+java\end{DoxyCompactItemize}
